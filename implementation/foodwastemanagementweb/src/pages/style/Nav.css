@@ -1,0 +1,151 @@
+.nav-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px; 
+  background-color: #fdb74d; 
+}
+
+.nav-center {
+  display: flex;
+  justify-content: center;
+  color: #5d4037; /* Dark brown text color */
+  gap: 20px;
+}
+
+.nav-button {
+  background-color: #5d4037; 
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+  background-color: #795548; /* Darker brown on hover */
+}
+
+.nav-containerPhone {
+  display: none;
+}
+
+/* CSS for phones (up to 767px) */
+@media only screen and (max-width: 767px) {
+  .nav-container {
+      display: none;
+  }
+  .nav-containerPhone {
+      display: flex;
+      background-color: #ffcc80; /* Background color for the mobile navigation - a warm orange */
+      padding: 10px;
+      justify-content: center;
+  }
+}
+
+.menu-toggle {
+  background: #5d4037; /* Dark brown background color for the menu toggle button */
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  font-size: 1rem;
+  margin-right: 10px;
+  padding: 10px;
+  z-index: 10000; /* Ensure the sidebar is displayed above everything */
+  position: absolute; /* Position the menu toggle button */
+  top: 20px; /* Adjust top position as needed */
+  left: 20px; /* Adjust left position as needed */
+}
+
+/* Updated icon color */
+.menu-toggle svg {
+  color: #5d4037; /* Dark brown icon color */
+}
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  background-color: #5d4037; /* Dark brown background color for the sidebar */
+  z-index: 1000; /* Ensure the sidebar is displayed above everything */
+  transition: 0.5s;
+  padding-top: 60px;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+.sidebar.open {
+  width: 250px;
+}
+
+.sidebar-header {
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.sidebar-nav {
+  padding-top: 20px;
+}
+
+.sidebar-nav .nav-link {
+  color: #fff;
+  display: block;
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #a1887f; /* Light brown border color */
+}
+
+.sidebar-nav .nav-link:hover {
+  background-color: #a1887f; /* Light brown background color on hover */
+}
+
+.sidebar-nav .active {
+  background-color: #795548; /* Brown background color for the active link */
+}
+
+/* Updated icon color */
+.nav-link svg {
+  color: #fff; /* White icon color */
+}
+
+body {
+  background-image: url('./img/food.jpg'); 
+  background-repeat: repeat; /* Repeat the pattern vertically and horizontally */
+  background-size: 100%;
+  position: relative; /* Make sure the body can be positioned */
+  overflow: hidden; /* Ensure no scrollbars appear */
+}
+
+/* Pseudo-element to apply the blur */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: inherit;
+  background-repeat: inherit;
+
+  filter: blur(8px); /* Adjust the blur intensity as needed */
+  z-index: -1; /* Make sure it stays behind the body content */
+}
+
+/* Ensure that the body content is above the pseudo-element */
+body > * {
+  position: relative;
+  z-index: 1;
+}
+

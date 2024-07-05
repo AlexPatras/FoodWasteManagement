@@ -1,0 +1,78 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /*this prevents a strange bug that only loads half the page as body*/
+}
+
+.community-page {
+  width: 80%;
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.8); /* White background with 80% opacity */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for better contrast */
+}
+
+.post-form {
+  margin-bottom: 20px;
+}
+
+.post-form textarea {
+  width: 97%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.post-form button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.post-list .post {
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.post-content {
+  margin-bottom: 10px;
+}
+
+.post-author {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.post-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.like-btn,
+.dislike-btn {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.like-btn {
+  background-color: #28a745;
+  color: white;
+}
+
+.dislike-btn {
+  background-color: #dc3545;
+  color: white;
+}
